@@ -1,34 +1,53 @@
-header {
-    background-color: lightblue;
-    width: 100%;
-    text-align: center;
-}
-
-h1 {
-    padding: 50px;
+body {
+    font-family: Montserrat, Arial;
 }
 
 main {
-    border: 1px solid rgb(61, 56, 56);
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 0;
+   margin: 30px 10px;
+   padding: 15px;
+   border-radius: 5px;
+   background-color: rgb(241, 241, 239);
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
-.picture-container {
-    display: flex;
-    justify-content: center;
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
 
+figure {
+    background-color: white;
+    padding: 15px;
+    margin: 0;
+    height: 40em;
+    width: 95%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .thumbnail {
-    width: 400px;
-    border: 2px solid lightblue;
-    margin-bottom: 50px;
+    width: 30em;
+    margin-bottom: 20px;
+}
+
+figcaption {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(63, 63, 65);
+
 }
 
 .text-container {
+    margin: 60px 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,9 +56,11 @@ main {
 
 .carmen-text {
     width: 1200px;
-    font-size: 25px;
+    font-size: 1.8rem;
     margin: 15px 0;
     text-align: justify;
+    color: rgb(38, 15, 107);
+    font-weight: 500;
 
 }
 
