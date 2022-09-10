@@ -1,5 +1,6 @@
 body {
     font-family: Montserrat, Arial;
+    color: black;
 }
 
 main {
@@ -15,7 +16,7 @@ main {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: min(7vw, 4rem);
     text-align: center;
 }
 
@@ -23,8 +24,8 @@ figure {
     background-color: white;
     padding: 15px;
     margin: 0;
-    height: 40em;
     width: 95%;
+    border-radius: 20px;
 
     display: flex;
     flex-direction: column;
@@ -33,20 +34,26 @@ figure {
 }
 
 .thumbnail {
-    width: 30em;
+    width: 21vw;
+    min-width: 300px;
     margin-bottom: 20px;
 }
 
 figcaption {
     margin: 0;
-    font-size: 1.6rem;
+    font-size: min(4vw, 1.2rem);
+    text-align: center;
+    min-width: 200px;
     font-weight: 700;
-    color: rgb(63, 63, 65);
+}
 
+h2 {
+    font-size: min(4vw, 1.6rem);
+    text-align: center;
 }
 
 .text-container {
-    margin: 60px 0;
+    margin: 40px 0 60px 0;
 
     display: flex;
     flex-direction: column;
@@ -55,11 +62,10 @@ figcaption {
 }
 
 .carmen-text {
-    width: 1200px;
-    font-size: 1.8rem;
+    font-size: min(3.5vw, 1.2rem);
+    max-width: 1600px;
     margin: 15px 0;
     text-align: justify;
-    color: rgb(38, 15, 107);
     font-weight: 500;
 
 }
