@@ -1,31 +1,116 @@
 body {
     font-family: Montserrat, Arial;
     color: black;
+    box-sizing: border-box;
+    background-color: rgb(226, 226, 223);
+}
+
+html {
+    box-sizing: border-box;
+  }
+  
+*, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  p, div, h1, h2, figure {
+    margin: 0;
+  }
+
+  header {
+    width: 100%;
+    background-color: rgb(226, 226, 223);
+    border-bottom: 2px solid rgb(192, 186, 186);
+    padding: 0 50px;
+    margin-bottom: 40px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.icon-container {
+    width: 250px;
+    flex-shrink: 1;
+}
+
+.neo-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+.neo-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+header {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.nav-button {
+    width: 60px;
+}   
+}
+
+h1 {
+    font-size: min(5.5vw, 3rem);
+    text-align: center;
+    color: black;
+}
+
+nav {
+    font-weight: 700;
+    width: 50%;
+    max-width: 250px;
+    display: flex;
+	justify-content: space-evenly;
+    flex-wrap: wrap;
+	align-items: center;
+	padding-inline-start: 0;
+	margin-block: 0;
+	height: 100%;
+}
+
+nav > .nav-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.nav-button {
+    width: 80px;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    font-weight: 700;
+    font-size: min(1.5vw, 0.8rem);
+    cursor: pointer;
 }
 
 main {
-   margin: 30px 10px;
-   padding: 15px;
-   border-radius: 5px;
-   background-color: rgb(241, 241, 239);
-
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
 
-h1 {
-    font-size: min(7vw, 4rem);
-    text-align: center;
-}
-
 figure {
+    margin-bottom: 40px;
     background-color: white;
     padding: 15px;
-    margin: 0;
-    width: 95%;
+    width: 50%;
+    height: auto;
+    min-width: 320px;
     border-radius: 20px;
+    border: 2px solid rgb(192, 186, 186);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
     display: flex;
     flex-direction: column;
@@ -35,12 +120,11 @@ figure {
 
 .thumbnail {
     width: 21vw;
-    min-width: 300px;
+    min-width: 200px;
     margin-bottom: 20px;
 }
 
 figcaption {
-    margin: 0;
     font-size: min(4vw, 1.2rem);
     text-align: center;
     min-width: 200px;
@@ -50,10 +134,13 @@ figcaption {
 h2 {
     font-size: min(4vw, 1.6rem);
     text-align: center;
+    margin-top: 15px;
 }
 
 .text-container {
-    margin: 40px 0 60px 0;
+    border: 2px solid rgb(192, 186, 186);
+    border-radius: 10px;
+    padding: 2px 15px;
 
     display: flex;
     flex-direction: column;
@@ -63,10 +150,9 @@ h2 {
 
 .carmen-text {
     font-size: min(3.5vw, 1.2rem);
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 15px 0;
     text-align: justify;
     font-weight: 500;
-
 }
 
