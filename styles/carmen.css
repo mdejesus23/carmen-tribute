@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
     font-family: Merriweather, Arial;
     color: black;
@@ -13,28 +17,27 @@ main {
   margin: 20px;
   padding: 10px;
   background-color: rgb(226, 226, 223);
-
 }
-html {
-    font-size: 16px;
-    line-height: 1.7rem;
-  }
-  
-* {
-    box-sizing: border-box;
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.5rem;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     text-align: center;
-    margin: 40px 0;
+    margin-bottom: 1.5rem;
 }
 
-.header p {
+header p {
   text-align: center;
   max-width: 500px;
   margin: 0 auto;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   font-size: 1.2rem;
 }
 
@@ -44,10 +47,10 @@ h1 {
 }
 
 figure {
-    margin: 40px auto;
+    margin: 4.5rem auto;
     background-color: white;
     padding: 15px;
-    width: 35%;
+    width: 25%;
     height: auto;
     min-width: 350px;
     border-radius: 20px;
@@ -55,7 +58,7 @@ figure {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.thumbnail {
+.carmen-img {
     width: 100%;
     min-width: 200px;
     object-fit: contain;
@@ -68,6 +71,19 @@ figcaption {
     font-weight: 700;
 }
 
+.text-container {
+  max-width: 1800px;
+  margin: 0 auto 0 auto;
+  border: 2px solid rgb(192, 186, 186);
+  border-radius: 10px;
+  padding: 2px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h2 {
     font-size: 1.7rem;
     text-align: center;
@@ -75,22 +91,9 @@ h2 {
     margin-bottom: 40px;
 }
 
-.text-container {
-    max-width: 1200px;
-    margin: 100px auto;
-    border: 2px solid rgb(192, 186, 186);
-    border-radius: 10px;
-    padding: 2px 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .carmen-text {
     font-size: 1.2rem;
-    max-width: 1200px;
+    width: 80%;
     margin: 15px 0;
     text-align: justify;
     font-weight: 300;
@@ -99,7 +102,7 @@ h2 {
 
 .prayer-container {
   max-width: 900px;
-  margin: 20px auto;
+  margin: 4.5rem auto;
   padding: 0 10px;
 }
 
@@ -141,6 +144,10 @@ h3 {
 @media (max-width: 580px) {
   html {
     font-size: 12px;
+  }
+
+  .carmen-text {
+    width: 100%;
   }
 }
 
