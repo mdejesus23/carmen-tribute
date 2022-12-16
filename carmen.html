@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <title>Tribute to Carmen Hernandez</title>
-    <link rel="stylesheet" href="styles/carmen.css" />
-
     <meta charset="UTF-8" />
     <meta name="description" content="Carmen Hernandez Tribute" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles/carmen.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,15 +25,30 @@
     />
   </head>
   <body>
+    <header>
+      <figure>
+        <img
+          class="neocat-icon"
+          src="image/icon.png"
+          alt="Neo catechumenal way icon"
+        />
+      </figure>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#prayer">Prayer</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </header>
     <main>
-      <header>
+      <div class="heading-section" id="home">
         <h1>CARMEN HERNÁNDEZ</h1>
         <p>
           The woman who was co-initiator of the Neocatechumenal Way with Kiko
           Argüello
         </p>
-      </header>
-      <figure>
+      </div>
+      <figure class="main-image">
         <img
           class="carmen-img"
           src="image/carmen.jpg"
@@ -38,9 +56,8 @@
         />
         <figcaption>NOVERMBER 24,1930, † MADRID, JULY 19, 2016</figcaption>
       </figure>
-
       <section>
-        <div class="text-container">
+        <article class="text-container">
           <h2>Life of Carmen Hernandez of Neo Catechumenal Way.</h2>
           <div class="carmen-text">
             Carmen was, along with Kiko, an initiator of the Way. She was born
@@ -116,9 +133,42 @@
             Good News in every place, even in the most far away, never
             forgetting the most marginalized people.”, wrote the Pope. Francis.
           </div>
-        </div>
+        </article>
 
-        <div class="prayer-container">
+        <section class="gallery-section">
+          <h3 id="gallery">Carmen's Gallery</h3>
+          <article class="gallery-container">
+            <figure class="image-gallery-container">
+              <img src="image/carmen-img1.jpg" />
+              <div class="overlay">Text Here!</div>
+            </figure>
+            <figure class="image-gallery-container">
+              <img src="image/carmen-img2.jpg" />
+              <div class="overlay">Text Here!</div>
+            </figure>
+            <figure class="image-gallery-container">
+              <img src="image/carmen-img3.jpg" />
+              <div class="overlay">Text Here!</div>
+            </figure>
+            <figure class="image-gallery-container">
+              <img src="image/carmen-img4.jpg" />
+              <div class="overlay">Text Here!</div>
+            </figure>
+            <figure class="image-gallery-container">
+              <img src="image/carmen-img5.jpg" />
+              <div class="overlay">Text Here!</div>
+            </figure>
+            <figure class="image-gallery-container">
+              <img src="image/carmen-img6.jpg" />
+              <div class="overlay">
+                Carmen Hernandez with Kiko Arguello and Pope John Paul II.
+              </div>
+            </figure>
+          </article>
+        </section>
+
+        <article class="prayer-container">
+          <h4 id="prayer">Prayer</h4>
           <p>
             Oh Lord, who in choosing Carmen Hernández as co-initiator of the
             Neocatechumenal Way, granted her a great love for Jesus Christ and
@@ -127,21 +177,29 @@
             in the trials of the cross; grant that I, through her intercession,
             may be faithful to the baptism I have received and, if it is your
             will, grant also the grace I ask of you. Through Jesus Christ our
-            Lord. Amen
+            Lord. Amen!
           </p>
-        </div>
-        <h3>
-          If you want to read more about Carmen Hernandez you can visit
-          <a
-            class="neo-link"
-            target="_blank"
-            href="https://neocatechumenaleiter.org/en/history/carmen-hernandez/"
-          >
-            Neo Catechumenal Way
-          </a>
-          website.
-        </h3>
+        </article>
       </section>
     </main>
+    <footer>
+      <p class="reference">
+        If you want to read more about Carmen Hernandez you can visit
+        <a
+          class="neo-link"
+          target="_blank"
+          href="https://neocatechumenaleiter.org/en/history/carmen-hernandez/"
+        >
+          Neo Catechumenal Way
+        </a>
+        website.
+      </p>
+    </footer>
+
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
   </body>
 </html>

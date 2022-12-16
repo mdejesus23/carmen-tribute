@@ -1,54 +1,33 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-    font-family: Merriweather, Arial;
-    color: black;
-}
-
 main {
-  margin: 20px;
+  margin: 8rem 4rem 4rem 4rem;
   padding: 10px;
-  background-color: rgb(226, 226, 223);
 }
 
-header {
+.heading-section {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 4.5rem;
+  padding: 0 1rem;
+  margin: 4rem auto 0 auto;
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
-header p {
+.heading-section p {
   text-align: center;
-  max-width: 500px;
   margin: 0 auto;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
   font-size: 1.2rem;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1600px;
-}
-
-figure {
-    margin: 4.5rem auto;
-    background-color: white;
+.main-image {
+    margin: 4rem auto 0 auto;
     padding: 15px;
     width: 25%;
     height: auto;
@@ -65,15 +44,16 @@ figure {
 }
 
 figcaption {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
     min-width: 200px;
     font-weight: 700;
+    margin: 0.6rem 0;
 }
 
 .text-container {
   max-width: 1800px;
-  margin: 0 auto 0 auto;
+  margin: 4rem auto 0 auto;
   border: 2px solid rgb(192, 186, 186);
   border-radius: 10px;
   padding: 2px 15px;
@@ -100,10 +80,72 @@ h2 {
     line-height: 1.8rem;
 }
 
+.gallery-section {
+  margin: 4rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+h4, h3 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+  
+}
+
+.image-gallery-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 1.2rem;
+  padding: 20px;
+  text-align: center;
+}
+
+.image-gallery-container:hover img {
+}
+/* When you mouse over the container, fade in the overlay title */
+.image-gallery-container:hover .overlay {
+  opacity: 1;
+}
+
+.image-gallery-container img {
+  width: 370px;
+  height: 340px;
+  object-fit: cover;
+  border: 2px solid rgb(102, 112, 114);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 3px rgb(131, 108, 108, 0.5);
+}
+
 .prayer-container {
   max-width: 900px;
-  margin: 4.5rem auto;
-  padding: 0 10px;
+  margin: 6rem auto;
+  padding: 2rem;
+  border: 2px solid rgb(102, 112, 114);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 3px rgb(131, 108, 108, 0.5);
+}
+
+.prayer-container h4 {
+  margin-bottom: 2rem;
 }
 
 .prayer-container p {
@@ -114,40 +156,41 @@ h2 {
   font-weight: 300;
 }
 
-h3 {
-  padding: 50px 0;
-  text-align: center;
-}
 
-.neo-link {
-  text-decoration: none;
-}
-
-
-
-/* Makes the font-size responsive*/
 /* large screen */
 @media (min-width: 1400px) {
-  html {
-    font-size: 18px;
-  }
+  
 }
 
 /* Tablet screen */
 @media (max-width: 768px) {
-  html {
-    font-size: 16px;
+  main {
+    margin: 8rem 0.5rem 4rem 0.5rem;
   }
+
+  figcaption {
+    font-size: 0.8rem;
+  }
+
+  .gallery-container img {
+    width: 500px;
+  }
+ 
 }
 
 /* Mobile screen */
 @media (max-width: 580px) {
-  html {
-    font-size: 12px;
+  main {
+    margin: 8rem 0.5rem 4rem 0.5rem;
   }
 
-  .carmen-text {
-    width: 100%;
+  figcaption {
+    font-size: 1rem;
+  }
+
+  .gallery-container img {
+    width: 400px;
   }
 }
+
 

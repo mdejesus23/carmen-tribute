@@ -1,0 +1,55 @@
+:root {
+    --bg-color1: rgb(241, 241, 228);
+    --bg-color2: rgb(131, 108, 108);
+    --bg-color3: rgb(155, 155, 119);
+    --text-color1: rgb(90, 66, 66);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 16px;
+    font-family: Merriweather, Arial;
+  }
+  
+  body {
+      color: black;
+      font-weight: 600;
+      background-color: var(--bg-color1);
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--text-color1);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* Tablet screen */
+@media (max-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  /* Mobile screen */
+  @media (max-width: 580px) {
+    html {
+      font-size: 12px;
+    }
+  
+    .carmen-text {
+      width: 100%;
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
