@@ -1,9 +1,9 @@
 /* toggle menu button */
 function myFunction(myNav) {
-    if (myNav.style.display === "none") {
-        myNav.style.display = "flex";
-    } else {
+    if (myNav.style.display === "flex") {
         myNav.style.display = "none";
+    } else {
+        myNav.style.display = "flex";
     }
 }
 
