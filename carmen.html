@@ -28,7 +28,7 @@
     <header>
       <figure>
         <img
-          class="neocat-icon"
+          class="logo"
           src="image/icon.png"
           alt="Neo catechumenal way icon"
           loading="lazy"
@@ -36,12 +36,13 @@
       </figure>
 
       <nav id="myNavbar">
-        <a href="#main">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#prayer">Prayer</a>
+        <a href="#main" onclick="closeNav()">Home</a>
+        <a href="#gallery" onclick="closeNav()">Gallery</a>
+        <a href="#prayer" onclick="closeNav()">Prayer</a>
       </nav>
+      <button class="open-button" onclick="myFunction(myNavbar)">☰</button>
     </header>
-    <main id="main">
+    <main id="main" onclick="closeNav()">
       <div class="heading-section">
         <h1>CARMEN HERNÁNDEZ</h1>
         <p>
@@ -58,6 +59,7 @@
         />
         <figcaption>NOVERMBER 24,1930, † MADRID, JULY 19, 2016</figcaption>
       </figure>
+
       <section>
         <article class="text-container">
           <h2>Life of Carmen Hernandez of Neo Catechumenal Way.</h2>
@@ -222,6 +224,6 @@
       </p>
     </footer>
 
-    <script></script>
+    <script src="script/index.js"></script>
   </body>
 </html>
