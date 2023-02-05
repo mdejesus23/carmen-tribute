@@ -36,13 +36,21 @@
       </figure>
 
       <nav id="myNavbar">
-        <a href="#main" onclick="closeNav()">Home</a>
-        <a href="#gallery" onclick="closeNav()">Gallery</a>
-        <a href="#prayer" onclick="closeNav()">Prayer</a>
+        <a href="#main" onclick="">Home</a>
+        <a href="#gallery" onclick="">Gallery</a>
+        <a href="#prayer" onclick="">Prayer</a>
       </nav>
-      <button class="open-button" onclick="myFunction(myNavbar)">☰</button>
+      <div
+        id="menuButton"
+        class="menu-container menu-button"
+        onclick="myFunction(this, myNavbar)"
+      >
+        <div class="bar1 menu-button"></div>
+        <div class="bar2 menu-button"></div>
+        <div class="bar3 menu-button"></div>
+      </div>
     </header>
-    <main id="main" onclick="closeNav()">
+    <main id="main" onclick="">
       <div class="heading-section">
         <h1>CARMEN HERNÁNDEZ</h1>
         <p>
@@ -138,61 +146,50 @@
             forgetting the most marginalized people.”, wrote the Pope. Francis.
           </div>
         </article>
+
         <div id="gallery" class="gallery-margin-top"></div>
         <section class="gallery-section">
           <h3>Carmen's Gallery</h3>
-          <article class="gallery-container">
-            <figure class="image-gallery-container">
-              <img
-                src="image/carmen-img1.jpg"
-                alt="carmen photo"
-                loading="lazy"
-              />
-              <div class="overlay">Text Here!</div>
-            </figure>
-            <figure class="image-gallery-container">
-              <img
-                src="image/carmen-img2.jpg"
-                alt="carmen photo"
-                loading="lazy"
-              />
-              <div class="overlay">Text Here!</div>
-            </figure>
-            <figure class="image-gallery-container">
-              <img
-                src="image/carmen-img3.jpg"
-                alt="carmen photo"
-                loading="lazy"
-              />
-              <div class="overlay">Text Here!</div>
-            </figure>
-            <figure class="image-gallery-container">
-              <img
-                src="image/carmen-img4.jpg"
-                alt="carmen photo"
-                loading="lazy"
-              />
-              <div class="overlay">Text Here!</div>
-            </figure>
-            <figure class="image-gallery-container">
-              <img
-                src="image/carmen-img5.jpg"
-                alt="carmen photo"
-                loading="lazy"
-              />
-              <div class="overlay">Text Here!</div>
-            </figure>
-            <figure class="image-gallery-container">
-              <img
-                src="image/carmen-img6.jpg"
-                alt="carmen photo"
-                loading="lazy"
-              />
-              <div class="overlay">
-                Carmen Hernandez with Kiko Arguello and Pope John Paul II.
-              </div>
-            </figure>
+          <!-- Slideshow container -->
+          <article class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="image/carmen-img1.jpg" style="width: 100%" />
+              <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="image/carmen-img2.jpg" style="width: 100%" />
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="image/carmen-img3.jpg" style="width: 100%" />
+              <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="image/carmen-img4.jpg" style="width: 100%" />
+              <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </article>
+          <br />
+
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
         </section>
         <div id="prayer" class="prayer-margin-top"></div>
         <article class="prayer-container">

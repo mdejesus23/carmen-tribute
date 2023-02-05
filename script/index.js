@@ -1,27 +1,52 @@
-/* toggle menu button */
-function myFunction(myNav) {
-    if (myNav.style.display === "flex") {
-        myNav.style.display = "none";
-    } else {
-        myNav.style.display = "flex";
-    }
-}
+function myFunction(menuButton, nav) {
+    menuButton.classList.toggle("change");
+    nav.classList.toggle("show");
+  }
 
-/* switch to origial design when resizing */
-window.addEventListener("resize", function(){
-let winWidth = window.innerWidth;
-    if (winWidth >= 580 ) {
-        document.getElementById("myNavbar").style.display = "flex";
-    } else {
-        document.getElementById("myNavbar").style.display = "none";
-    }
-  });
-
-  /* switch to close navbar */
   function closeNav() {
-    if (window.innerWidth >= 580 ) {
-        document.getElementById("myNavbar").style.display = "flex";
-    } else {
-        document.getElementById("myNavbar").style.display = "none";
+    const menuButton = document.getElementById("menuButton");
+    const nav = document.getElementById("myNavbar");
+
+    if (menuButton.classList.contains("change") && nav.classList.contains("show")) {
+        menuButton.classList.remove("change");
+        nav.classList.remove("show");
     }
   }
+
+// If the user click dosen't match the menu button close navigation and change menu
+document.addEventListener("click", event => {
+    if (!event.target.matches(".menu-button")) {
+        closeNav();
+    }
+});
+
+let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = [...document.getElementsByClassName("mySlides")];
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
