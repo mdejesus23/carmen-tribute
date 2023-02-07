@@ -16,7 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -50,7 +55,18 @@
         <div class="bar3 menu-button"></div>
       </div>
     </header>
-    <main id="main" onclick="">
+    <main id="main">
+      <div id="quoteContainer" class="quotes-container">
+        <div class="quotes" id="quotes">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae animi
+          ut, ipsa blanditiis iste laboriosam, laudantium, nihil quos
+          consectetur quam dolorem. Ad reiciendis accusamus aperiam sapiente
+          ullam perspiciatis repellendus. Vitae?
+        </div>
+
+        <div id="verse" class="quotes-from">-melnard</div>
+      </div>
+
       <div class="heading-section">
         <h1>CARMEN HERNÁNDEZ</h1>
         <p>
@@ -154,27 +170,41 @@
           <article class="slideshow-container">
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-              <div class="numbertext">1 / 4</div>
-              <img src="image/carmen-img1.jpg" style="width: 100%" />
-              <div class="text">Caption Text</div>
+              <div class="numbertext">1 / 6</div>
+              <img src="image/carmen-img1.jpg" />
+              <div class="text-overlay">Caption Text</div>
             </div>
 
             <div class="mySlides fade">
-              <div class="numbertext">2 / 4</div>
-              <img src="image/carmen-img2.jpg" style="width: 100%" />
-              <div class="text">Caption Two</div>
+              <div class="numbertext">2 / 6</div>
+              <img src="image/carmen-img2.jpg" />
+              <div class="text-overlay">Caption Text</div>
             </div>
 
             <div class="mySlides fade">
-              <div class="numbertext">3 / 4</div>
-              <img src="image/carmen-img3.jpg" style="width: 100%" />
-              <div class="text">Caption Three</div>
+              <div class="numbertext">3 / 6</div>
+              <img src="image/carmen-img3.jpg" />
+              <div class="text-overlay">Caption Text</div>
             </div>
 
             <div class="mySlides fade">
-              <div class="numbertext">4 / 4</div>
-              <img src="image/carmen-img4.jpg" style="width: 100%" />
-              <div class="text">Caption Three</div>
+              <div class="numbertext">4 / 6</div>
+              <img src="image/carmen-img4.jpg" />
+              <div class="text-overlay">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 6</div>
+              <img src="image/carmen-img5.jpg" />
+              <div class="text-overlay">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">6 / 6</div>
+              <img src="image/carmen-img6.jpg" />
+              <div class="text-overlay">
+                Carmen Hernandez with Kiko Arguello and Pope John Paul II.
+              </div>
             </div>
 
             <!-- Next and previous buttons -->
@@ -189,6 +219,8 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
           </div>
         </section>
         <div id="prayer" class="prayer-margin-top"></div>
