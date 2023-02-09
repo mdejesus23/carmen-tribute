@@ -1,7 +1,9 @@
-function myFunction(menuButton, nav) {
+// toggle classname on menubutton and navigation bar.
+function myFunction(menuButton, nav) { 
     menuButton.classList.toggle("change");
     nav.classList.toggle("show");
   }
+
 
   function closeNav() {
     const menuButton = document.getElementById("menuButton");
@@ -51,38 +53,41 @@ function showSlides(n) {
         dots[slideIndex - 1].className += " active";
       }
 
+  // array of bible quotes
   const arrOfQuotes = 
   [
-    `"For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life."`,
-    `"Trust in the Lord with all your heart, and do not lean on your own understanding."`,
-    `"Let your light shine before others, so that they may see your good works and give glory to your Father in heaven."`,
-    `"Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God."`,
-    `"Blessed are the poor in spirit, for theirs is the kingdom of heaven."`,
-    `“Love the Lord your God with all your heart and with all your soul and with all your mind. And Love your neighbor as yourself.”`,
-    `"Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you."`,
-    `"I can do all things through Christ who strengthens me."`,
-    `"The Lord is my shepherd, I shall not want."`,
-    `"For the word of God is living and active, sharper than any two-edged sword, piercing to the division of soul and of spirit, of joints and of marrow, and discerning the thoughts and intentions of the heart."`
+    `"All things must pass, only God remains." `,
+    `"Let us love God with all our heart, with all our soul, with all our strength and all our mind."`,
+    `"The Lord does not delay His promise, as some regard 'delay,' but He is patient with you, not wishing that any should perish but that all should come to repentance." `,
+    `"Do small things with great love."`,
+    `"He who is obedient will flourish in the land, and he who is pure will be fed from the hand of the king."`,
+    `"The most powerful weapon to conquer the devil is humility. For, as he does not know at all how to employ it, neither does he know how to defend himself from it."`,
+    `"Prayer is the raising of one's mind and heart to God or the requesting of good things from God."`,
+    `"Do not be afraid of anything. You will do marvelous work with the help of God."`,
+    `"We must pray without ceasing and work without tiring, for the bread of the future is the seed of today."`,
+    `"To one who has faith, no explanation is necessary. To one without faith, no explanation is possible."`
   ]
 
+  // array of verses of bible quotes
   const verses =
   [
-    "- John 3:16",
-    "- Proverbs 3:5",
-    "- Matthew 5:16",
-    "- Philippians 4:6",
-    "- Matthew 5:3",
-    "- Matthew 22:37-39",
-    "- Matthew 7:7",
-    "- Philippians 4:13",
-    "- Psalm 23:1",
-    "- Hebrews 4:12"
+    "- St. Teresa of Avila",
+    "- St. Luke",
+    "- St. Peter",
+    "- St. Therese of Lisieux",
+    "- St. John Chrysostom",
+    "- St. Vincent de Paul",
+    "- St. John Damascene",
+    "- St. John Bosco",
+    "- St. John Bosco",
+    "- St. Thomas Aquinas"
   ]
 
-  function quoteRandomizer() {
-    const randomNumber = Math.floor(Math.random() * 11);
-    document.getElementById("quotes").innerHTML = arrOfQuotes[randomNumber];
-    document.getElementById("verse").innerHTML = verses[randomNumber];
+  // function for quotes randomizer
+  function quoteRandomizer(arr1, arr2) {
+    const randomNumber = Math.floor(Math.random() * 10);
+    document.getElementById("quotes").innerHTML = arr1[randomNumber];
+    document.getElementById("verse").innerHTML = arr2[randomNumber];
   }
 
-  quoteRandomizer();
+  quoteRandomizer(arrOfQuotes, verses);
