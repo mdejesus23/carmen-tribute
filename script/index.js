@@ -96,3 +96,4 @@ const currentYear = new Date().getFullYear();
 
 const footer = document.getElementById("footer-copyrights");
 footer.innerHTML = currentYear;
+// try to fixed
